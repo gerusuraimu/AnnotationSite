@@ -5,7 +5,7 @@ def create_user_space(home):
     os.makedirs(home, exist_ok=False)
 
 
-def create_workspace(home, workspace_name):
+def workspace_set_generate(home, workspace_name):
     workspace_list = [
         'rectangle',
         'polygon',
