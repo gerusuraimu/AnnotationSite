@@ -1,0 +1,11 @@
+h2 {
+    position: relative;
+    top: 1em;
+}
+
+b {
+    position: relative;
+    top: 1em;
+    color: red;
+    font-size: 1.2em;
+}

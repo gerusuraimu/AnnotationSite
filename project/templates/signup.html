@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/appendix/css/index.css">
+<div class="column is-4 is-offset-4">
+  <h3 class="title">Sign Up</h3>
+  <div class="box">
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+      {{ messages[0] }}. Go to <a href="/login">login page</a>.
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/signup">
+
+      <div class="field">
+        <div class="control">
+          <label for="email"></label>
+          <input class="input is-large" id="email" type="email" name="email" placeholder="Email" autofocus="" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label for="name"></label>
+          <input class="input is-large" id="name" type="text" name="name" placeholder="Name" autofocus="" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label for="password"></label>
+          <input class="input is-large" id="password" type="password" name="password" placeholder="Password" required>
+        </div>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+        <label class="form-check-label" for="flexCheckDefault">
+          以下の注意書きに同意します。
+        </label>
+      </div>
+
+      <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+
+    </form>
+
+    <script src="../static/appendix/js/signup.js"></script>
+
+  </div>
+</div>
+
+<h2 class="subtitle">
+  <b>
+    管理の都合で予告なくデータが削除されることがあります。<br>
+    また、当サイトの利用により発生した情報漏洩や損害、その他トラブルはいかなる理由でも一切責任を負いません。<br>
+    絶対に機密情報や重要なデータをアップロードしないでください。
+  </b>
+</h2>
+{% endblock %}
