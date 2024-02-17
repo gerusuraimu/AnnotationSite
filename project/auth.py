@@ -19,14 +19,13 @@ def login():
 def login_post():
     name = request.form.get('name')
     password = request.form.get('password')
-    remember = True if request.form.get('remember') else False
     user = User.query.filter_by(name=name).first()
+    print(password)
 
     if not user or not check_password_hash(user.password, password):
         flash('Please check your login details and try again.')
         return redirect(url_for('auth.login'))
 
-    login_user(user, remember=remember)
     return redirect(url_for('main.profile'))
 
 

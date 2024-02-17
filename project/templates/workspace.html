@@ -46,6 +46,7 @@
 
     <section class="p-3 border-0 border-0 w-50 m-auto">
 
+      {% if not enabled %}
       <div class="card text-center">
         <div class="card-header">
           Create Workspace
@@ -59,6 +60,7 @@
           <a href="#" class="btn btn-primary">Create Workspace!</a>
         </div>
       </div>
+      {% endif %}
 
     </section>
   </body>
