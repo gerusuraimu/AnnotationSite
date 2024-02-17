@@ -1,4 +1,3 @@
-const wrapper = document.getElementById('wrapper');
 const createButton = document.getElementById('create-button');
 
 

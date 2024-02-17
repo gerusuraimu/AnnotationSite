@@ -73,7 +73,7 @@
               </div>
             </div>
           </div>
-          <script src="../static/appendix/js/workspace_delete_button.js"></script>
+          <script src="../static/appendix/js/workspace_card_button.js"></script>
           <script>
               setMethod('{{ loop.index0 }}');
           </script>
@@ -107,22 +107,6 @@
             <div class="input-box">
               <label for="workspace"></label>
               <input class="workspace-name" id="workspace" type="text" placeholder="Workspace Name" name="workspace_name" required>
-            </div>
-            <button type="submit" class="create-btn">Create</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="wrapper" id="wrapper-delete">
-        <span class="icon-close" id="icon-close-delete">
-          <ion-icon name="close"></ion-icon>
-        </span>
-        <div class="form-box create-workspace">
-          <h2>Create Workspace</h2>
-          <form method="post" action="/workspace/create_workspace">
-            <div class="input-box">
-              <label for="workspace"></label>
-              <input class="workspace-name" id="workspace-delete" type="text" placeholder="Workspace Name" name="workspace_name" required>
             </div>
             <button type="submit" class="create-btn">Create</button>
           </form>
