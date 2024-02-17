@@ -1,4 +1,3 @@
-import os
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from RequestManager.workspace import workspace_set_generate, load_workspace_list, rename_space, delete_space
